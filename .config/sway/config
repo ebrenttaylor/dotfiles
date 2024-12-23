@@ -1,0 +1,54 @@
+set $mod Mod4
+
+set $term foot
+set $menu wmenu-run
+set $color-primary #408ec6
+set $color-secondary #7a2048
+set $color-background #1e2761
+
+exec swayidle -w timeout 300 'swaymsg "output * dpms power off' resume 'swaymsg "output * dpms on'
+### Key bindings
+#
+# Basics:
+#
+    bindsym $mod+Return exec $term
+    bindsym $mod+d exec $menu
+    bindsym $mod+Shift+q kill
+
+    floating_modifier $mod normal
+
+    bindsym $mod+Shift+c reload
+
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -B 'Yes, exit' 'swaymsg exit'
+
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    bindsym $mod+f fullscreen
+
+    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+space focus mode_toggle
+
+    bindsym $mod+a focus parent
+
+    bindsym $mod+Shift+minus move scratchpad
+
+
+bar swaybar_command waybar
+
+include /etc/sway/config.d/*
+include ./config.d/*

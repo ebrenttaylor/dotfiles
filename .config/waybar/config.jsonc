@@ -1,0 +1,18 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "window-rewrite-default": "{name}",
+        "window-rewrite": {
+            "app_id<firefox>": "FF"
+        }
+    }
+}
+    
