@@ -1,18 +1,24 @@
 {
     "layer": "top",
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
     "sway/window": {
         "max-length": 50
     },
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{name}",
-        "window-rewrite-default": "{name}",
-        "window-rewrite": {
-            "app_id<firefox>": "FF"
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "urgent": "<U+F06A>",
+            "focused": "<U+F0E9>",
+            "default": "<U+1F60E>"
         }
     }
 }
-    
