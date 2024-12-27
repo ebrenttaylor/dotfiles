@@ -1,6 +1,6 @@
 set $mod Mod4
 set $term foot
-set $menu wmenu-run
+set $menu walker
 set $fileman thunar
 
 font pango:SourceCodePro Nerd Font 14
